@@ -1,0 +1,106 @@
+.card {
+    transition: box-shadow 280ms cubic-bezier(.4,0,.2,1);
+    display: block;
+    position: relative;
+    padding: 16px;
+    border-radius: 4px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main{
+    min-height:-webkit-fill-available !important;
+    width: 500px;
+    max-height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .f{
+    color:#4285F4;
+    }
+    .u{
+    color:#DB4437
+    }
+    .n{
+      color: #F4B400
+    }
+    .d{
+      color:#4285F4;
+    }
+    .o{
+      color:  #0F9D58
+    }
+    .O{
+      color:#DB4437
+    }
+  
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .i{
+    margin-top: 20%;
+  }
+  .signIn{
+    color: #4586ee;
+    font-weight: bold;
+    cursor: pointer;
+    // margin-top: 20%;
+  }
+  
+  .content {
+    max-width: 500px;
+    margin: auto;
+    margin-top: 50px;
+  }
+
+  .main{
+    min-height:-webkit-fill-available !important;
+  }
+  .card :hover{
+    background-color: #ffa500;
+    transform: scale(1.1); 
+    
+   }
+   .service{
+    margin-left: 36px;
+    margin-top: 36px;
+  }
+  .message{
+    margin-top: 8px;
+  }
+  
+  .mat-card-subtitle{
+    color: #202124;
+    
+  }
+  
+  button{
+    display: inline-block;
+  }
+  .selected{
+    background-color: #e6ac00;
+    width: fit-content;
+    max-width: 144px;
+  
+  .insideMat{
+     margin-left: -36px;
+     margin-top: -36px;
+     min-height: 212px;
+  }
+  
+  }
+  .notSelected{
+    background-color: #b8b5ae;
+    width: fit-content;
+    max-width: 144px;
+  
+    .insideMat{
+        margin-left: -36px;
+        margin-top: -36px;
+     min-height: 212px;
+  
+    }
+   
+  }
