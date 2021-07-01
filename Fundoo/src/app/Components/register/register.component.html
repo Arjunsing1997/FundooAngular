@@ -25,7 +25,7 @@
                                 <mat-card-subtitle>Create your Fundoo Account</mat-card-subtitle>
                             </div>
     
-                            <div fxLayout="row" fxLayoutWrap fxLayoutGap="10px" fxLayout.xs="column">
+                            <div class="names" fxLayout="row" fxLayoutWrap fxLayoutGap="10px" fxLayout.xs="column">
                                 <div>
                                     <mat-form-field appearance="outline" fxFlex="100" fxFlex.xs="100">
                                         <mat-label>First Name</mat-label>
@@ -38,9 +38,7 @@
                                             characters
                                         </mat-error>
                                     </mat-form-field>
-                                </div>
-    
-                                <div>
+                               
                                     <mat-form-field appearance="outline" fxFlex.xs="100">
                                         <mat-label>Last Name</mat-label>
                                         <input matInput type="text" placeholder="LastName" formControlName="lastName"
@@ -63,7 +61,7 @@
                                     </mat-error>
                                     <mat-error *ngIf="registerForm.hasError('email', 'email')">invalid mail</mat-error>
                                     <mat-hint>You can use letters,Numbers</mat-hint>
-                                    <mat-icon matSuffix>email</mat-icon>
+                                    <mat matSuffix>@gmail.com</mat>
                                 </mat-form-field>
                             </div>
     
@@ -101,21 +99,24 @@
                                             <mat-error *ngIf="registerForm.hasError('notSame')">
                                                 Passwords did not match
                                             </mat-error>
+                                            
                                         </mat-form-field>
-                                     
+                                       
                                     </div>
                                 </div>
                             </div>
-                            <div fxLayoutAlign="space-between center">
-                                <a class="signIn" (click)="login()">Login Instead</a>
-                                <div></div>
-                                <button mat-raised-button color="black" [disabled]="!registerForm.valid">REGISTER</button>
+                            <div fxLayoutAlign="space-between center" class="buttons">
+                                <a class="signIn" (click)="login()">signIn Instead</a>
+                                <button mat-raised-button [disabled]="!registerForm.valid" class="register">REGISTER</button>
+                                
+                            </div>
+                            <div ng-repeat="file in imagefinaldata" style="display:inline;">
+                                <img class="close" src="../assets/Images/accountImage.svg" width="244" height="244" />
                             </div>
                         </mat-card-content>
                     </div>
-    
                 </form>
             </div>
         </mat-card>
     </div>
-    </div>
+</div>

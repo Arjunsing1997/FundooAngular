@@ -9,6 +9,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {MatDialogModule} from '@angular/material/dialog';
@@ -35,7 +36,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule, FormsModule, ReactiveFormsModule, MatCardModule, HttpClientModule,
-    MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatMenuModule, MatDialogModule
+    MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatMenuModule, MatDialogModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

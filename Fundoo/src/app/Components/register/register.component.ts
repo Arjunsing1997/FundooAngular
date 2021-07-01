@@ -6,6 +6,7 @@ import { UserServiceService } from '../../Services/user-service.service';
 
 
 
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',

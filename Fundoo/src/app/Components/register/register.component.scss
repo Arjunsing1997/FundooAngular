@@ -46,13 +46,16 @@
     color: #4586ee;
     font-weight: bold;
     cursor: pointer;
-    // margin-top: 20%;
+     padding-inline: 10%;
   }
   
   .content {
-    max-width: 500px;
-    margin: auto;
-    margin-top: 50px;
+    min-height: calc(100% - 80%);
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid green;
   }
 
   .main{
@@ -102,5 +105,25 @@
      min-height: 212px;
   
     }
-   
   }
+  .names
+  {
+    padding-right: 20px;
+  }
+ 
+  .close {
+    position:absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    margin-top:130px;
+  }
+  .register
+  {
+    background-color: #4285F4;
+    cursor: pointer;
+    color:white ;
+  }
+  
+  
+  
