@@ -14,6 +14,19 @@
     max-height: fit-content;
     margin-left: auto;
     margin-right: auto;
+    margin-top: auto;
+  }
+  .main1{
+    min-height:-webkit-fill-available !important;
+    width: 500px;
+    max-height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+  }
+  .fundoo
+  {
+    align-items: left;
   }
   .f{
     color:#4285F4;
@@ -46,16 +59,37 @@
     color: #4586ee;
     font-weight: bold;
     cursor: pointer;
-     padding-inline: 10%;
+    padding: 10px;
   }
+  // .content > div {
+
+  //   background-color: #ffffff;
+  //   width: 70%;
+  //   line-height: 75px;
+  //   font-size: 30px;
+  //  // padding-top: 100px;
+  //  padding: 0px;
+   
+  // }
+  // .border
+  // {
+  //     display: inline-flex;
+  //     flex-direction: row;
+  //     align-items: flex-start;
+  //     justify-content: flex-start;
+  //     border: 1px solid black;
+  //     flex-basis: content;
+  // }
   
   .content {
-    min-height: calc(100% - 80%);
-    background-color: #f7f7f7;
     display: flex;
-    justify-content: center;
+    background-color: #ffffff;
+    flex-wrap:nowrap ;
+    flex-direction: row;
     align-items: center;
-    border: 0px solid green;
+    justify-content: center;
+    border: 1px solid rgb(95, 88, 88);
+    border-radius: 1px ;
   }
 
   .main{
@@ -78,7 +112,10 @@
     color: #202124;
     
   }
-  
+  mat-card p{
+    font-size: large;
+  }
+ 
   button{
     display: inline-block;
   }
