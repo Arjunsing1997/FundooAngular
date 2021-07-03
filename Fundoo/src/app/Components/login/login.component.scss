@@ -22,9 +22,32 @@
     text-decoration: none;
   }
   .main{
-    min-height:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    border: 2px solid #b0b3ac;
+    padding: 3%;
+    padding-inline: 100px;
+    
   
   }
+  .heading{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  // .email{
+  //   display: flex;
+  //   align-items: center;
+  //   flex-direction: column;
+  // }
+  // .email > div {
+  //   display: flex;
+  //   flex-direction: row;
+  // }
+  
   
   #b1 {
     float: right;
@@ -33,10 +56,10 @@
   }
 
   .row {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-       padding: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
   }
 
   .card :hover{
@@ -60,12 +83,29 @@
     font-size: inherit;
     font-family: "Google Sans",Roboto,Arial,sans-serif;
     cursor: pointer;
-
+    border:transparent;
+  }
+  mat-label{
+    display: inline-block;
+  }
+  .end{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-top: 30px;
+  }
+  .end > div {
+    background-color: #ffffff;
+   padding-right: 20px;
    
   }
 
   .signup{
-    background-color: #2156ac;
+    background-color: #1a73e8;
+  }
+  .newAcc
+  {
+    color:#1a73e8 ;
   }
  .loginbutton{
     color : black;
@@ -101,13 +141,7 @@
     }
    
   }
-  
-  
-  
-  
-  
-  
-  
+ 
 
   .navbar {
   //   @include back-ground-color(#fb0);

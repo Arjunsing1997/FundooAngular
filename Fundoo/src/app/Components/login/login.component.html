@@ -1,9 +1,7 @@
-<div  >
-    <div class="row" >
+<div class="row" *ngIf="auth">
         <div class="main" >
-            <mat-card >
                 <mat-card-title>
-                    <p class="fundoo">
+                    <p>
                         <span class="f">F</span>
                         <span class="u">u</span>
                         <span class="n">n</span>
@@ -15,7 +13,11 @@
     
                 <form [formGroup]="loginForm" autocomplete="off" novalidate (ngSubmit)="loginUser(loginForm.value)">
                     <mat-card-content>
-                        <mat-card-subtitle>Please sign in with valid credentials!</mat-card-subtitle>
+                        <div class="heading">
+                            <h1 >Sign in</h1>
+                            <h3>Use your Fundoo Account</h3>
+                        </div>
+                       
                         <div fxLayout="column" fxLayoutWrap fxLayoutGap="10px" fxLayout.xs="column">
                             <div>
                                 <mat-form-field [style.fontSize.px]="12" appearance="outline" fxFlex="100" fxFlex.xs="100">
@@ -24,7 +26,6 @@
                                     <mat-icon matSuffix>email</mat-icon>
                                     <mat-error *ngIf="hasError('email', 'required')">email is required</mat-error>
                                 </mat-form-field>
-                                
                             </div>
     
                             <div>
@@ -37,35 +38,33 @@
                                         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                                     </button>
                                     <mat-error *ngIf="hasError('password', 'required')">password is required</mat-error>
-                                    
                                 </mat-form-field>
                             </div>
                         </div>
     
-                        <div >
-                            <div class="forgot">
-                                <a (click)="toggleStatus()" >ForgotPassword?</a>
-                                
-                            </div>
-    
-    
-                            <div fxLayoutAlign="space-between center" class="Buttons">
-                                <p color="blue"> <a  routerLink="../register">Create New Account</a></p>
-                                <button class="loginbutton" mat-raised-button color="primary">SignIn</button>
+                        <div fxLayoutAlign="space-between center" >
+                            <div>
+                                <button (click)="toggleStatus()"  class="forgot">ForgotPassword?</button>
                             </div>
                             
+                            <div class="end">
+                                <div >
+                                    <p> <a  routerLink="../register">Create New Account</a></p>
+                                </div>
+                                <div>
+                                    <button class="loginbutton" mat-raised-button color="primary">Sign in</button>
+                                </div> 
+                            </div>
                         </div>
                     </mat-card-content>
     
                 </form>
-            </mat-card>
         </div>
-    </div>
-    </div>
-    <div class="row" *ngIf="!auth">
-        <div fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutGap="5%">
-            <div class="main" fxLayoutAlign="center center" fxFlex="100" fxFlexOffset.xs="0" fxFlex.xs="100">
-                <mat-card fxFlex.xs="100" fxFlex.md="70" fxFlex.lg="30">
+</div>
+
+    <!-- Forget Password -->
+<div class="row" *ngIf="!auth">
+    <div class="main">
         <mat-card-title>
             <p>
                 <span class="f">F</span>
@@ -76,20 +75,21 @@
                 <span class="O">o</span>
             </p>
         </mat-card-title>
-        <mat-card-subtitle >Forgot Password</mat-card-subtitle>
-        <div>
-            <mat-form-field [style.fontSize.px]="12" appearance="outline" fxFlex="100" fxFlex.xs="100">
-                <mat-label>Email</mat-label>
-                <input matInput type="text" placeholder="Email" formControlName="email" id="email">
-                <mat-icon matSuffix>email</mat-icon>
-                <mat-error *ngIf="hasError('email', 'required')">email is required</mat-error>
-            </mat-form-field>
+        <h1 >Enter your Email</h1>
+        <div class="email"  fxLayout="column" fxLayoutWrap fxLayoutGap="10px" fxLayout.xs="column">
+            <div >
+                <mat-form-field [style.fontSize.px]="12" appearance="outline" fxFlex="100" fxFlex.xs="100">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="text" placeholder="Email" formControlName="email" id="email">
+                    <mat-icon matSuffix>email</mat-icon>
+                    <mat-error *ngIf="hasError('email', 'required')">email is required</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="btn btn-link" color="primary">
+                <button class="loginbutton" mat-raised-button id="b1">Submit</button>
+            </div>
+
         </div>
        
-        <button mat-raised-button class="loginbutton" (click)="toggleStatus()" class="btn btn-link" color="primary" >Sign Up</button>
-    
-    </mat-card>
+        
     </div>
-    </div>
-    </div>
-    
