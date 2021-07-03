@@ -1,7 +1,7 @@
-<div class="row" *ngIf="auth">
-    <div fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutGap="5%">
-        <div class="main" fxLayoutAlign="center center" fxFlex="100" fxFlexOffset.xs="0" fxFlex.xs="100">
-            <mat-card fxFlex.xs="100" fxFlex.md="70" fxFlex.lg="30">
+<div  >
+    <div class="row" >
+        <div class="main" >
+            <mat-card >
                 <mat-card-title>
                     <p class="fundoo">
                         <span class="f">F</span>
@@ -26,9 +26,6 @@
                                 </mat-form-field>
                                 
                             </div>
-                            <div ng-repeat="file in imagefinaldata" style="display:inline;">
-                                <img class="close" src="../assets/Images/accountImage.svg" width="244" height="244" />
-                            </div>
     
                             <div>
                                 <mat-form-field [style.fontSize.px]="12" appearance="outline" fxFlex="100" fxFlex.xs="100">
@@ -45,15 +42,18 @@
                             </div>
                         </div>
     
-                        <div fxLayoutAlign="space-between center">
-                            <div>
-                                <p color="blue"> <a  routerLink="../register">Create New Account</a></p>
-                                <button color="primary" mat-raised-button (click)="toggleStatus()" class="btn btn-link" class="forgot">ForgotPassword?</button>
+                        <div >
+                            <div class="forgot">
+                                <a (click)="toggleStatus()" >ForgotPassword?</a>
+                                
                             </div>
     
     
+                            <div fxLayoutAlign="space-between center" class="Buttons">
+                                <p color="blue"> <a  routerLink="../register">Create New Account</a></p>
+                                <button class="loginbutton" mat-raised-button color="primary">SignIn</button>
+                            </div>
                             
-                            <button class="loginbutton" mat-raised-button color="primary">SignIn</button>
                         </div>
                     </mat-card-content>
     
