@@ -11,27 +11,25 @@ export class HttpServiceService {
 
   constructor(private http: HttpClient) { }
 
-  post(url, data) {
+  token: any; 
+
+  post(url: string, data: any){
+
     let options = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
-        'Authorization': localStorage.getItem('token'),
 
+        
       })
     }
-    console.log(" data in http ", data);
-
-    return this.http.post(this.baseUrl + url, data,options);
-
+    return this.http.post(this.baseUrl + url,data,options);
   }
 
   get(url) {
-
+   
     let options = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
-        'Authorization': localStorage.getItem('token'),
-
       })
     }
     return this.http.get(this.baseUrl + url, options);

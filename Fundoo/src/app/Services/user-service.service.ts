@@ -7,15 +7,14 @@ import {HttpServiceService} from '../Services/http-service.service'
 export class UserServiceService {
  
   constructor(private httpService: HttpServiceService) { }
-  registerUser(data) {
+  registerUser(data: any) {
     console.log(" data in user service ", data);
-
-    return this.httpService.post('user/Register', data);
+    return this.httpService.post('/api/User', data);
   }
 
   loginUser(data) {
 
-    return this.httpService.post('user/login', data);
+    return this.httpService.post('/api/User/Authentication', data);
 
   }
 

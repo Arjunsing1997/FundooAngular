@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormBuilder, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { from } from 'rxjs';
 import { UserServiceService } from '../../Services/user-service.service';
@@ -42,19 +42,18 @@ export class RegisterComponent implements OnInit {
 
 
 
-  register = (registerFormValue) => {
+  register = (registerForm: { firstName: any; lastName: any; email: any; password: any; }) => {
     try {
       let newUser = {
-        firstName: registerFormValue.firstName,
-        lastName: registerFormValue.lastName,
-        email: registerFormValue.email,
-        password: registerFormValue.password,
-        service: 'advance'
-        // console.log("new user created ", newUser);
-      }
+        firstName: registerForm.firstName,
+        lastName: registerForm.lastName,
+        email: registerForm.email,
+        password: registerForm.password,
+        service: 'advance'      }
 
       this.userService.registerUser(newUser).subscribe(response => {
-        console.log(" register successfulll", response);
+        console.log(" register successfull", response);
+        
 
       })
     
@@ -63,8 +62,10 @@ export class RegisterComponent implements OnInit {
 
     }
   }
-  login() {
-    this.router.navigate(['login']);
+ 
 
+  login()
+  {
+    this.router.navigate(['login']);
   }
 }

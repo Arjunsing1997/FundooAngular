@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
     return this.loginForm.controls[controlName].hasError(errorName);
   }
 
-  loginUser(loginform) {
+  loginUser(loginform : any) {
     let reqData = {
       email: loginform.email,
       password: loginform.password
