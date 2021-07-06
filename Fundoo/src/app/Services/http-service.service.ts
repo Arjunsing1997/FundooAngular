@@ -13,21 +13,13 @@ export class HttpServiceService {
 
   post(url: string, data: any){
 
-    // let options = {
-    //   headers: new HttpHeaders({
-    //     'Content-Type': 'application/json',        
-    //   })
-    // }
+   
     return this.http.post(this.baseUrl + url,data);
   }
 
   get(url) {
    
-    // let options = {
-    //   headers: new HttpHeaders({
-    //     'Content-Type': 'application/json',
-    //   })
-    // }
+   
     return this.http.get(this.baseUrl + url);
 
 }
