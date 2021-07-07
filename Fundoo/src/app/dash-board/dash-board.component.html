@@ -1,18 +1,87 @@
 <!-- For The Side bar -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <mat-toolbar>
     Side Bar Navigation
+
+    <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click) = "sidenav.toggle()">
+        <mat-icon class="material-icons-outlined iconColor" *ngIf="!sidenav.opened">
+            Menu
+        </mat-icon>
+        <mat-icon class="material-icons-outlined iconColor" *ngIf="sidenav.opened">
+            close
+        </mat-icon>
+    </button>
 </mat-toolbar>
 
 <!--  -->
 <mat-sidenav-container>
-    <mat-sidenav>
-        
-    </mat-sidenav>
-    <mat-sidenav-content>
-        <div class="content">
-            Main content
+    <mat-sidenav #sidenav = "matSidenav">
+        <div class="iconsPanel">
+            <button mat-button >
+                <mat-icon class="material-icons-outlined iconClass" >lightbulb</mat-icon>
+                  <span> Notes</span>
+            </button>
+    
+            <button mat-button >
+                <mat-icon class="material-icons-outlined iconClass" >notifications_none</mat-icon>
+                  <span>Notification</span>
+            </button>
+    
+            <button mat-button >
+                <mat-icon class="material-icons-outlined iconClass" >edit</mat-icon>
+                  <span>Edit</span>
+            </button>
+    
+            <button mat-button >
+                <mat-icon class="material-icons-outlined iconClass" >archive</mat-icon>
+                  <span>Archive</span>
+            </button>
+    
+            <button mat-button >
+                <mat-icon class="material-icons-outlined iconClass" >delete</mat-icon>
+                  <span>Bin</span>
+            </button>
+        </div>
 
+    </mat-sidenav >
+    <mat-sidenav-content>
+        <div class="content mat-elevation-z4">
+            Main content
         </div>
     </mat-sidenav-content>
 </mat-sidenav-container>
 
+<!--  -->
+
+
+
+<!-- <mat-icon>lightbulb</mat-icon>
+<mat-icon>notifications_none</mat-icon>
+ <mat-icon>forward</mat-icon>
+<mat-icon>archive_outline</mat-icon>
+ <mat-icon>delete_outline</mat-icon> -->
+ <!-- <mat-icon class="material-icons-outlined iconColor">menu</mat-icon>
+ <mat-icon class="material-icons-outlined iconColor">search</mat-icon> -->
+
+ <!-- Dipesh Walte08:38
+<div class="iconsPanel">
+    <button mat-button class="material-icons-outlined iconClass">
+      <mat-icon [inline]="true">notification_add</mat-icon>
+    </button>
+    <button mat-button class="material-icons-outlined iconClass">
+      <mat-icon [inline]="true">person_add</mat-icon>
+    </button>
+    <button mat-button class="material-icons-outlined iconClass" (click)="onColorPalleteClick()">
+      <mat-icon [inline]="true">palette</mat-icon>
+    </button>
+    <button mat-button class="material
+ <button mat-button class="material-icons-outlined iconClass" >
+      <mat-icon [inline]="true">photo</mat-icon>
+    </button>
+    <button mat-button class="material-icons-outlined iconClass" (click)="onArchieveClick()">
+      <mat-icon [inline]="true">archive</mat-icon>
+    </button>
+    <button mat-button class="material-icons-outlined iconClass" (click)="onMoreMenuClick()">
+      <mat-icon [inline]="true">more_vert</mat-icon>
+    </button>
+</div> -->
