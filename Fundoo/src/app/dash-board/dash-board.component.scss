@@ -1,7 +1,8 @@
 //@import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined");
 mat-toolbar{
-    background-color: rgb(35, 35, 212);
-    color: rgb(252, 251, 250);
+    background-color: white;
+    color: rgb(14, 13, 13);
+  
 }
 
 mat-sidenav{
@@ -31,14 +32,12 @@ mat-sidenav{
 
 mat-sidenav-container{
     height: calc(100vh - 65px);
-    
-
 }
 .iconsPanel{
     display: flex;
     flex-direction: column;
     background-color: white;
-    width: 100%;
+   // width: 100%;
     justify-content: flex-start;
     font-size: 2rem;
     align-items: flex-start;
@@ -52,4 +51,40 @@ mat-icon{
     display: flex;
    align-items: flex-start;
     
+}
+.search {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 500px;
+    margin-left: 150px;
+    inline-size: 700px;
+   // box-shadow: gray;
+   // border-color: gray;
+    border-width: 3px;
+   align-items: center;
+   
+    
+}
+.searchIP{
+    outline: none;
+    outline-style: none;
+    box-shadow: none;
+    border-color: transparent;
+    border: solid 2px transparent;
+    inline-size: 500px;
+    margin: 10px;
+   
+}
+.headerButtons{
+display: flex;
+flex-direction: row;
+padding-inline-end: 100px;
+}
+.fundoo{
+    margin-left: 10px;
+    font-family: 'Product Sans',Arial,sans-serif;
+    font-size: 22px;
+    color: rgb(88, 86, 86);
+    opacity: 1;
 }

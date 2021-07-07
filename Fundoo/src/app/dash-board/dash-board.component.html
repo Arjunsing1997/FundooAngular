@@ -1,24 +1,36 @@
 <!-- For The Side bar -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<mat-toolbar>
-    Side Bar Navigation
-
-    <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click) = "sidenav.toggle()">
-        <mat-icon class="material-icons-outlined iconColor" *ngIf="!sidenav.opened">
-            Menu
-        </mat-icon>
-        <mat-icon class="material-icons-outlined iconColor" *ngIf="sidenav.opened">
-            close
-        </mat-icon>
+<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+<mat-toolbar >
+    <button mat-icon-button (click) = "sidenav.toggle()">
+        <mat-icon  class="material-icons-outlined" >menu</mat-icon>
     </button>
+    <img  src="../assets/Images/KeepIcon.png" >
+    <span class="fundoo">Fundoo</span>
+    <div class="headerButtons">
+        <div>
+            <button  class="search"  >
+                <mat-icon class="material-icons-outlined " >search</mat-icon>
+                <input class="searchIP" type="search" placeholder="Search" > 
+            </button>
+        </div>
+        <div>
+            <button matTooltip="Refresh" mat-icon-button >
+                <mat-icon>refresh</mat-icon>
+              </button>
+        </div>
+
+       
+    </div>
+
+    <!--  -->
 </mat-toolbar>
 
 <!--  -->
 <mat-sidenav-container>
-    <mat-sidenav #sidenav = "matSidenav">
+    <mat-sidenav #sidenav = "matSidenav" opened>
         <div class="iconsPanel">
-            <button mat-button >
-                <mat-icon class="material-icons-outlined iconClass" >lightbulb</mat-icon>
+            <button mat-button class="material-icons-outlined iconClass"  >
+                <mat-icon >lightbulb</mat-icon>
                   <span> Notes</span>
             </button>
     
@@ -33,12 +45,12 @@
             </button>
     
             <button mat-button >
-                <mat-icon class="material-icons-outlined iconClass" >archive</mat-icon>
+                <mat-icon class="material-icons-outlined iconClass" >archive_outline</mat-icon>
                   <span>Archive</span>
             </button>
     
             <button mat-button >
-                <mat-icon class="material-icons-outlined iconClass" >delete</mat-icon>
+                <mat-icon class="material-icons-outlined iconClass" >delete_outline</mat-icon>
                   <span>Bin</span>
             </button>
         </div>
