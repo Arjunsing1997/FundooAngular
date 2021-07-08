@@ -14,7 +14,7 @@ mat-sidenav{
     border-radius: 10px;
     border-color: white;
     padding: 16px;
-    text-align: center;
+    text-align:start;
 
 }
 
@@ -32,6 +32,7 @@ mat-sidenav{
 
 mat-sidenav-container{
     height: calc(100vh - 65px);
+
 }
 .iconsPanel{
     display: flex;
@@ -105,4 +106,12 @@ flex-direction: row;
     font-size: 22px;
     color: rgb(88, 86, 86);
     opacity: 1;
+}
+app-create-note{
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    border-color: gray;
+    background-color:white;
+    box-shadow: yellow;
 }

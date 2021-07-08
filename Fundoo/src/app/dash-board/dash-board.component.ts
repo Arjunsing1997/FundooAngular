@@ -12,6 +12,7 @@ export class DashBoardComponent implements OnInit {
 
   @ViewChild(MatSidenav)
   sidenav! : MatSidenav; 
+  isExpanded : boolean = true ;
 
   constructor(private  observer : BreakpointObserver) {
 
@@ -25,11 +26,14 @@ export class DashBoardComponent implements OnInit {
       {
         this.sidenav.mode = 'over';
         this.sidenav.close();
+        this.isExpanded = false;
       }
       else
       {
         this.sidenav.mode = 'side';
         this.sidenav.open();
+        this.isExpanded = true
+
       }
    });
   }

@@ -50,48 +50,52 @@
 
 <!--  -->
 <mat-sidenav-container>
-    <mat-sidenav #sidenav = "matSidenav" opened="false">
-
-      <mat-nav-list>
-        
-        <mat-nav-item>
-          <mat-icon>lightbulb</mat-icon>
-        </mat-nav-item>
-
-      </mat-nav-list>
+    <mat-sidenav #sidenav = "matSidenav" opened="true" >
+     
         <div class="iconsPanel">
-            <button mat-button class="material-icons-outlined iconClass" style="padding: inherit;padding-bottom: 10px;" >
-                <mat-icon  >lightbulb</mat-icon>
-                  <span> Notes</span>
-            </button>
-    
+          <mat-nav-list>
+
+            <mat-list-item>
+              <button mat-button class="material-icons-outlined iconClass" style="padding: inherit;padding-bottom: 10px;" >
+                  <mat-icon >lightbulb</mat-icon>
+                    <span *ngIf="isExpanded"> Notes</span>
+              </button>
+            </mat-list-item>
+            
+            <mat-list-item>
             <button mat-button style="padding: inherit;padding-bottom: 15px;">
                 <mat-icon class="material-icons-outlined iconClass ">notifications_none</mat-icon>
-                  <span>Notification</span>
+                  <span *ngIf="isExpanded">Notification</span>
             </button>
+          </mat-list-item>
     
+          <mat-list-item>
             <button mat-button style="padding: inherit;padding-bottom: 15px;">
                 <mat-icon class="material-icons-outlined iconClass" >edit</mat-icon>
-                  <span>Edit</span>
+                  <span *ngIf="isExpanded">Edit</span>
             </button>
+          </mat-list-item>
     
+          <mat-list-item>
             <button mat-button style="padding: inherit;padding-bottom: 15px;" >
                 <mat-icon class="material-icons-outlined iconClass" >archive_outline</mat-icon>
-                  <span>Archive</span>
+                  <span *ngIf="isExpanded">Archive</span>
             </button>
-    
+          </mat-list-item>
+
+          <mat-list-item>
             <button mat-button style="padding: inherit;padding-bottom: 15px;" >
                 <mat-icon class="material-icons-outlined iconClass" >delete_outline</mat-icon>
-                  <span>Bin</span>
+                  <span *ngIf="isExpanded">Bin</span>
             </button>
-          </div>
-
+          </mat-list-item>
+          </mat-nav-list>
+        </div>
     </mat-sidenav >
     <mat-sidenav-content>
-        <div >
-            <mat-icon class="material-icons-outlined">notifications_none</mat-icon>
-            Notes you add appears here
-        </div>
+      <div class="mat-elevation createNote">
+        <app-create-note></app-create-note>
+      </div>
       
     </mat-sidenav-content>
 </mat-sidenav-container>
