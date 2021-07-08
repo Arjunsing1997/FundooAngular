@@ -12,15 +12,18 @@ export class HttpServiceService {
 
 
   post(url: string, data: any){
-
-   
     return this.http.post(this.baseUrl + url,data);
   }
 
   get(url) {
-   
-   
     return this.http.get(this.baseUrl + url);
+  }
 
-}
+  passwordPost(url, email : any){
+    return this.http.post(this.baseUrl + url, email);
+  }
+
+  resetPassword(url, data : any){
+    return this.http.post(this.baseUrl+url,data);
+  }
 }

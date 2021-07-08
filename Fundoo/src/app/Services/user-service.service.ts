@@ -13,9 +13,14 @@ export class UserServiceService {
   }
 
   loginUser(data) {
-
     return this.httpService.post('/api/User/Authentication', data);
-
   }
 
+  forgetPassword(email: any){
+    return this.httpService.passwordPost('/api/User/forgot-password', email);
+  }
+
+  resetPassword(data : any){
+    return this.httpService.resetPassword('/api/User/Reset-Password',data)
+  }
 }

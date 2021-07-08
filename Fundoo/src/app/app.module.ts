@@ -20,6 +20,8 @@ import { from } from 'rxjs';
 import { RegisterComponent } from './Components/register/register.component';
 import { LoginComponent } from './Components/login/login.component';
 import { DashBoardComponent } from './dash-board/dash-board.component';
+import { ForgetPasswordComponent } from './Components/forget-password/forget-password.component';
+import { ResetComponent } from './Components/reset/reset.component';
 
 
 
@@ -29,7 +31,9 @@ import { DashBoardComponent } from './dash-board/dash-board.component';
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    DashBoardComponent
+    DashBoardComponent,
+    ForgetPasswordComponent,
+    ResetComponent
   ],
   imports: [
     BrowserModule,

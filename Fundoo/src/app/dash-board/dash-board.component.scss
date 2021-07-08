@@ -37,8 +37,6 @@ mat-sidenav-container{
     display: flex;
     flex-direction: column;
     background-color: white;
-   // width: 100%;
-    justify-content: flex-start;
     font-size: 2rem;
     align-items: flex-start;
     color: gray;
@@ -46,23 +44,23 @@ mat-sidenav-container{
 }
 mat-icon{
     margin-right: 8px;
+    font-size: 30px;
+
 }
-.iconsClass{
+.iconsColor{
     display: flex;
-   align-items: flex-start;
-    
 }
+
 .search {
     display: flex;
     align-items: center;
     background-color: transparent;
-    border-radius: 500px;
+    border-radius: 10px;
     margin-left: 150px;
     inline-size: 700px;
-   // box-shadow: gray;
-   // border-color: gray;
-    border-width: 3px;
+   
    align-items: center;
+   border-inline-color: gray ;
    
     
 }
@@ -70,7 +68,7 @@ mat-icon{
     outline: none;
     outline-style: none;
     box-shadow: none;
-    border-color: transparent;
+    border-color: gray;
     border: solid 2px transparent;
     inline-size: 500px;
     margin: 10px;
@@ -79,7 +77,27 @@ mat-icon{
 .headerButtons{
 display: flex;
 flex-direction: row;
-padding-inline-end: 100px;
+
+}
+.refresh{
+    padding-left: 100px;
+    color: rgb(160, 153, 153);
+    padding-top: 10px;
+}
+.view_list{
+    display: flex;
+    padding-left: 15px;
+    color: rgb(160, 153, 153);
+    padding-top: 10px;
+}
+.apps{
+    padding-left: 80px;
+    color: rgb(160, 153, 153);
+    padding-top: 10px;
+}
+.account{
+    color: rgb(160, 153, 153);
+    padding-top: 10px;
 }
 .fundoo{
     margin-left: 10px;

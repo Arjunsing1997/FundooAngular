@@ -44,4 +44,9 @@ export class LoginComponent implements OnInit {
 
   }
 
+  forget()
+  {
+    this.route.navigate(['forget-password']);
+  }
+
 }

@@ -2,7 +2,7 @@
 <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
 <mat-toolbar >
     <button mat-icon-button (click) = "sidenav.toggle()">
-        <mat-icon  class="material-icons-outlined" >menu</mat-icon>
+        <mat-icon  class="material-icons-outlined" height="20" width="20">menu</mat-icon>
     </button>
     <img  src="../assets/Images/KeepIcon.png" >
     <span class="fundoo">Fundoo</span>
@@ -13,13 +13,36 @@
                 <input class="searchIP" type="search" placeholder="Search" > 
             </button>
         </div>
-        <div>
+        <div class="refresh">
             <button matTooltip="Refresh" mat-icon-button >
                 <mat-icon>refresh</mat-icon>
               </button>
         </div>
 
-       
+        <div class="view_list">
+          <button matTooltip="Refresh" mat-icon-button >
+              <mat-icon class="material-icons-outlined ">view_list</mat-icon>
+            </button>
+      </div>
+
+      <div class="view_list">
+        <button matTooltip="apps" mat-icon-button >
+            <mat-icon class="material-icons-outlined ">settings_outline</mat-icon>
+        </button>
+      </div>
+
+      <div class="apps">
+        <button matTooltip="apps" mat-icon-button >
+            <mat-icon class="material-icons-outlined ">apps</mat-icon>
+        </button>
+      </div>
+
+      <div class="account">
+        <button matTooltip="account_circle" mat-icon-button >
+            <mat-icon class="material-icons-outlined ">account_circle</mat-icon>
+        </button>
+      </div>
+
     </div>
 
     <!--  -->
@@ -29,30 +52,32 @@
 <mat-sidenav-container>
     <mat-sidenav #sidenav = "matSidenav" opened>
         <div class="iconsPanel">
-            <button mat-button class="material-icons-outlined iconClass"  >
-                <mat-icon >lightbulb</mat-icon>
+            <button mat-button class="material-icons-outlined iconClass" style="padding: inherit;padding-bottom: 10px;" >
+                <mat-icon  >lightbulb</mat-icon>
                   <span> Notes</span>
             </button>
     
-            <button mat-button >
-                <mat-icon class="material-icons-outlined iconClass" >notifications_none</mat-icon>
+            <button mat-button style="padding: inherit;padding-bottom: 15px;">
+                <mat-icon class="material-icons-outlined iconClass ">notifications_none</mat-icon>
                   <span>Notification</span>
             </button>
     
-            <button mat-button >
+            <button mat-button style="padding: inherit;padding-bottom: 15px;">
                 <mat-icon class="material-icons-outlined iconClass" >edit</mat-icon>
                   <span>Edit</span>
             </button>
     
-            <button mat-button >
+            <button mat-button style="padding: inherit;padding-bottom: 15px;" >
                 <mat-icon class="material-icons-outlined iconClass" >archive_outline</mat-icon>
                   <span>Archive</span>
             </button>
     
-            <button mat-button >
+            <button mat-button style="padding: inherit;padding-bottom: 15px;" >
                 <mat-icon class="material-icons-outlined iconClass" >delete_outline</mat-icon>
                   <span>Bin</span>
             </button>
+
+           
         </div>
 
     </mat-sidenav >
