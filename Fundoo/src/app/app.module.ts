@@ -22,6 +22,8 @@ import { LoginComponent } from './Components/login/login.component';
 import { DashBoardComponent } from './dash-board/dash-board.component';
 import { ForgetPasswordComponent } from './Components/forget-password/forget-password.component';
 import { ResetComponent } from './Components/reset/reset.component';
+import { CreateNoteComponent } from './Components/create-note/create-note.component';
+
 
 
 
@@ -33,7 +35,8 @@ import { ResetComponent } from './Components/reset/reset.component';
     LoginComponent,
     DashBoardComponent,
     ForgetPasswordComponent,
-    ResetComponent
+    ResetComponent,
+    CreateNoteComponent
   ],
   imports: [
     BrowserModule,
