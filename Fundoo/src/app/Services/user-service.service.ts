@@ -17,10 +17,10 @@ export class UserServiceService {
   }
 
   forgetPassword(email: any){
-    return this.httpService.passwordPost('/api/User/forgot-password', email);
+    return this.httpService.post('/api/User/forgot-password', email);
   }
 
   resetPassword(data : any){
-    return this.httpService.resetPassword('/api/User/Reset-Password',data)
+    return this.httpService.post('/api/User/Reset-Password',data)
   }
 }

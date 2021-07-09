@@ -114,4 +114,15 @@ app-create-note{
     border-color: gray;
     background-color:white;
     box-shadow: yellow;
+    padding-top: 20px;
 }
+app-display-note{
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 20px;
+    border-color: gray;
+    background-color:white;
+    box-shadow: yellow;
+    padding-top: 30px;
+}
+

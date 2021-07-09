@@ -1,6 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { from } from 'rxjs';
+import { DisplayNoteComponent } from './Components/display-note/display-note.component';
 import { ForgetPasswordComponent } from './Components/forget-password/forget-password.component';
 import { LoginComponent } from './Components/login/login.component';
 import { RegisterComponent } from './Components/register/register.component';
@@ -15,8 +16,16 @@ const routes: Routes = [
   {path : 'forget-password', component: ForgetPasswordComponent},
   {path : 'reset' , component : ResetComponent},
   {path : 'dashBoard', component: DashBoardComponent,
-  loadChildren: () => import('../app/Models/dash-board/dash-board.module').then(m => m.DashBoardModule)
-}
+      children: [
+        {
+          path: '', redirectTo: 'note', pathMatch: 'full'
+        },
+
+        { path: 'note', component: NoteComponent }
+      ]
+    },
+  {path:'dsplaynote',component:DisplayNoteComponent}
+
 
 ];
 

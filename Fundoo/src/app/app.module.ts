@@ -23,6 +23,10 @@ import { DashBoardComponent } from './dash-board/dash-board.component';
 import { ForgetPasswordComponent } from './Components/forget-password/forget-password.component';
 import { ResetComponent } from './Components/reset/reset.component';
 import { CreateNoteComponent } from './Components/create-note/create-note.component';
+import { DisplayNoteComponent } from './Components/display-note/display-note.component';
+import { UpdateNoteComponent } from './Components/update-note/update-note.component';
+import { IconComponent } from './Components/icon/icon.component';
+import { NoteComponent } from './Components/note/note.component';
 
 
 
@@ -37,7 +41,11 @@ import { CreateNoteComponent } from './Components/create-note/create-note.compon
     DashBoardComponent,
     ForgetPasswordComponent,
     ResetComponent,
-    CreateNoteComponent
+    CreateNoteComponent,
+    DisplayNoteComponent,
+    UpdateNoteComponent,
+    IconComponent,
+    NoteComponent
   ],
   imports: [
     BrowserModule,

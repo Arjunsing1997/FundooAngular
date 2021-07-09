@@ -35,9 +35,10 @@ export class LoginComponent implements OnInit {
     }
     console.log(reqData);
 
-    this.userService.loginUser(reqData).subscribe((res)=>{
+    this.userService.loginUser(reqData).subscribe((res : any)=>{
       console.log(" resgister success full ",res);
-      this.route.navigate(['dashboard'])
+      localStorage.setItem("token", res);
+      this.route.navigate(['dashBoard'])
       
     })
 

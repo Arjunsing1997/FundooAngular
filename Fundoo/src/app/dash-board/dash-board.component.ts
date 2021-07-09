@@ -1,6 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
-import {BreakpointObserver } from '@angular/cdk/layout';
+import {BreakpointObserver, MediaMatcher } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-dash-board',
@@ -14,30 +14,21 @@ export class DashBoardComponent implements OnInit {
   sidenav! : MatSidenav; 
   isExpanded : boolean = true ;
 
-  constructor(private  observer : BreakpointObserver) {
+  mobileQuery: MediaQueryList;
 
+  fillerNav = Array.from({length: 50}, (_, i) => `Nav Item ${i + 1}`);
+
+  fillerContent = Array.from({length: 50}, () =>
+      ``);
+      private _mobileQueryListener: () => void;
+
+  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
+    this.mobileQuery = media.matchMedia('(max-width: 600px)');
+    this._mobileQueryListener = () => changeDetectorRef.detectChanges();
+    this.mobileQuery.addListener(this._mobileQueryListener);
 
    }
 
-   ngAfterViewInit() {
-     this.observer.observe(['{max-width : 800px}']).subscribe((res) =>{
-
-      if(res.matches)
-      {
-        this.sidenav.mode = 'over';
-        this.sidenav.close();
-        this.isExpanded = false;
-      }
-      else
-      {
-        this.sidenav.mode = 'side';
-        this.sidenav.open();
-        this.isExpanded = true
-
-      }
-   });
-  }
-     
 
   ngOnInit(): void {
   }
