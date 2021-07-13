@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   loginForm: FormGroup
   hide=true
+  token : any
   constructor(private formBuilder: FormBuilder, private userService:UserServiceService,private route:Router) { }
   auth:boolean = true;
 
@@ -37,7 +38,8 @@ export class LoginComponent implements OnInit {
 
     this.userService.loginUser(reqData).subscribe((res : any)=>{
       console.log(" resgister success full ",res);
-      localStorage.setItem("token", res);
+      // localStorage.setItem('currentUser', JSON.stringify({ token: this.token}));
+      localStorage.setItem('user', JSON.stringify(res))
       this.route.navigate(['dashBoard'])
       
     })

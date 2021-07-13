@@ -1,6 +1,4 @@
-<div>
-  <div class="mar">
-    
+<div class="mar" >
       <div class="display" [ngClass]="{'ListClass':true}">
         <mat-card *ngFor="let card of AllNotes" class="main-card" [style.background-color]=card.color
           fxLayout.xs="column" fxFlex.xs="95">
@@ -8,17 +6,22 @@
             <div fxLayout="row">
 
               <div fxFlex="90" (click)="openDialog(card)">
-                <p class="wordBreakTitle">{{card.title}}</p>
+                <p class="wordBreakTitle">{{card.header}}</p>
               </div>
               <div fxFlex="10" fxLayoutAlign="start start" class="div">
                 <button mat-icon-button matSuffix (click)="pinNote(card)" (click)="pin()" *ngIf="!isTrash"
                   matTooltip="unPin Note">
+                  <mat-icon>
+                    <span class="material-icons-outlined ">
+                      push_pin
+                      </span>
+                  </mat-icon>
                 </button>
               </div>
             </div>
             <div (click)="openDialog(card)">
 
-              <p class="wordBreak">{{card.description}}</p>
+              <p class="wordBreak">{{card.body}}</p>
             </div>
           </div>
           <div fxLayout="row" fxLayout="row wrap">
@@ -29,5 +32,4 @@
           </div>
         
         </mat-card>
-  </div>
 </div>

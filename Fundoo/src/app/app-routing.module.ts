@@ -4,6 +4,7 @@ import { from } from 'rxjs';
 import { DisplayNoteComponent } from './Components/display-note/display-note.component';
 import { ForgetPasswordComponent } from './Components/forget-password/forget-password.component';
 import { LoginComponent } from './Components/login/login.component';
+import { NoteComponent } from './Components/note/note.component';
 import { RegisterComponent } from './Components/register/register.component';
 import { ResetComponent } from './Components/reset/reset.component';
 import { DashBoardComponent } from './dash-board/dash-board.component';
@@ -24,7 +25,7 @@ const routes: Routes = [
         { path: 'note', component: NoteComponent }
       ]
     },
-  {path:'dsplaynote',component:DisplayNoteComponent}
+  {path:'displayNote',component:DisplayNoteComponent}
 
 
 ];

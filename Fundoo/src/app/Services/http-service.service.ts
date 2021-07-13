@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -8,6 +9,7 @@ export class HttpServiceService {
 
   baseUrl = 'https://localhost:44306';
   token : any;
+
 
   constructor(private http: HttpClient) { }
 
@@ -17,27 +19,40 @@ export class HttpServiceService {
   // }
 
   post(url: string, data: any){
-    this.token=localStorage.getItem('token');
-    console.log("token is",this.token);
+    // this.token=localStorage.getItem("token");
+    var currentUser = JSON.parse(localStorage.getItem('user'));
+    var token = currentUser.token; 
+    console.log("token is",token);
     let options = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
-        'Authorization':this.token,
+        'Authorization':token,
         
       })
     }
-    return this.http.post(this.baseUrl + url,data,options);
+   
+    return this.http.post(this.baseUrl + url,data);
   }
 
   get(url: any){
-    this.token=localStorage.getItem('token');
+   // this.token=localStorage.getItem('token');
+   var currentUser = JSON.parse(localStorage.getItem('user'));
+    var token = currentUser.token; 
     let options={
       headers:new HttpHeaders({
         'Content-Type': 'application/json',
-        'Authorization':this.token
+        'Authorization':token
       })
     }
-  return this.http.get(this.baseUrl+url,options);
+  return this.http.get(this.baseUrl+url);
+  }
+
+  delete(url: any, data: any){
+    return this.http.delete(this.baseUrl + url, data);
+  }
+
+  put(url : any, data: any){
+    return this.http.put(this.baseUrl+url, data);
   }
 
   // passwordPost(url, email : any){

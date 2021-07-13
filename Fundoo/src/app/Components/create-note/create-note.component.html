@@ -1,26 +1,60 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <div fxLayoutAlign="center center">
   <mat-card   class="view1" *ngIf="isOpen " (click)="isOpen = !isOpen" [style.background-color]=setColor>
-    <div  fxLayout="row" fxLayoutAlign="space-between center" >
+    <div  fxLayout="row" fxLayoutAlign="space-between center" class="HeaderButtons" >
       <div>
         Take a Note
       </div>
+      <div>
+        <div>
+          <button mat-icon-button matSuffix class="material-icons-outlined  ">
+            <mat-icon >
+              <span class="material-icons-outlined">
+                check_box_outlined
+                </span>
+            </mat-icon>
+          </button>
+        
+          <button mat-icon-button matSuffix class="material-icons-outlined  ">
+            <mat-icon>
+              <span class="material-icons-outlined">
+                brush
+                </span>
+            </mat-icon>
+          </button>
+          <button mat-icon-button matSuffix class="material-icons-outlined  ">
+            <mat-icon >
+              <span class="material-icons-outlined">
+                insert_photo
+                </span>
+            </mat-icon>
+          </button>
+        </div>
+      </div>
     </div>
   </mat-card>
-<mat-card *ngIf="!isOpen " class="takeNote" [style.background-color]=setColor>
+<mat-card  *ngIf="!isOpen " class="takeNote" [style.background-color]=setColor>
     <div  fxFlex="100" fxLayout="column">
-      <div >
+      <div class="" >
         <div fxLayout="row" fxLayoutAlign="space-between center">
-          <div fxFlex="100">
-            <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="auto"
+          <div fxFlex="100" class="pin">
+            <div>
+              <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="auto"
               cdkAutosizeMinColumns="auto" cdkAutosizeMaxRows="auto" placeholder="Title" [(ngModel)]="title"></textarea>
-          </div>
-          <div>
-            <button mat-icon-button matSuffix (click)="hide = !hide" matTooltip="pin">
-            </button>
+            </div>
+            <div>
+              <button mat-icon-button matSuffix style="align-items: flex-end;" >
+                <mat-icon>
+                <span class="material-icons-outlined pin2">
+                  push_pin
+                  </span>
+                </mat-icon>
+              </button>
+            </div>
           </div>
         </div>
 
-        <div>
+        <div class="text2">
           <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="auto"
             cdkAutosizeMinColumns="auto" cdkAutosizeMaxRows="auto" placeholder="Take a Note"
             [(ngModel)]="description"></textarea>
@@ -32,8 +66,57 @@
       <div fxLayout="row" fxFlex="100" fxLayoutAlign="space-between center">
         <div fxFlex="60">
         </div>
-        <div>
-          <button mat-icon-button matSuffix (click)="addNote()">close</button>
+        <div class="icons">
+          <div>
+            <button mat-icon-button matSuffix class="material-icons-outlined  ">
+              <mat-icon >add_alert</mat-icon>
+            </button>
+          </div>
+
+          <div>
+            <button mat-icon-button matSuffix class="material-icons-outlined  ">
+              <mat-icon >person_add_alt</mat-icon>
+            </button>
+          </div>
+
+          <div>
+            <button mat-icon-button matSuffix class="material-icons-outlined ">
+              <mat-icon >palette</mat-icon>
+            </button>
+          </div>
+
+          <div>
+            <button mat-icon-button matSuffix class="material-icons-outlined ">
+              <mat-icon >image</mat-icon>
+            </button>
+          </div>
+
+          <div>
+            <button mat-icon-button matSuffix class="material-icons-outlined ">
+              <mat-icon >archive</mat-icon>
+            </button>
+          </div>
+
+          <div>
+            <button mat-icon-button matSuffix class="material-icons-outlined iconClass">
+              <mat-icon >more_vert</mat-icon>
+            </button>
+          </div>
+          <div>
+            <button mat-icon-button matSuffix class="material-icons-outlined iconClass" >
+              <mat-icon aria-label="Undo" tabindex="0">undo</mat-icon>
+            </button>
+          </div>
+          <div>
+            <button mat-icon-button matSuffix class="material-icons-outlined iconClass" >
+              <mat-icon  >redo</mat-icon>
+            </button>
+          </div>
+
+          <div class="close">
+            <button style="font-size: medium;" mat-button matSuffix (click)="addNote()">close</button>
+          </div>
+          
         </div>
       </div>
     </div>

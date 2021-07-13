@@ -38,3 +38,42 @@
   min-height: 32px;
   height: 1px;
 }
+.icons{
+  display: flex;
+  flex-direction: row;
+  padding-right: 10px;
+  margin-top: 10px;
+}
+textarea{
+  border-style: none; 
+  border-color: Transparent; 
+  overflow: auto; 
+  font-family:  Roboto,Arial,sans-serif;
+  font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    letter-spacing: .01428571em;
+    font: bold;
+    outline: none;
+}
+mat-icon{
+  border-radius: 200px;
+  margin-right: 8px;
+  font-size: 20px;
+  color: rgb(112, 106, 106);
+
+}
+.HeaderButtons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.close
+{
+  margin-left: 150px;
+}
+.pin{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

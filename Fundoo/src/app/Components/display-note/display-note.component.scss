@@ -4,6 +4,12 @@
     background-color: rgb(204, 255, 144);
     padding-left: 2px;
   }
+  mat-card {
+    margin-top: 10px;
+    width: 360px;
+    display: grid;
+   
+  }
   ::ng-deep .mat-standard-chip.mat-chip-with-trailing-icon {
     padding-top: 7px;
     padding-bottom: 7px;
@@ -12,10 +18,18 @@
   }
   .display{
     // border: 1px solid black;
-    display:flex;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
   .mar {
-    margin-left: 17%;
+    display: flex;
+    justify-content:center;
+    margin-left: 25px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 30px;
   }
   @media screen and (max-width: 700px) {
     .mar {
@@ -29,7 +43,10 @@
   }
   ::ng-deep .mat-card {
     margin-top: 10px;
+    display: grid;
+   
   }
+  
   .div {
     visibility: hidden;
   }
@@ -39,6 +56,15 @@
   .main-card:hover .div {
     visibility: visible;
   }
+  .main-card{
+    width: 240px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  
   .flexcontainer {
     flex-flow: column wrap;
   }
@@ -113,11 +139,10 @@
   }
   .gridView {
     display: flex;
-    flex-direction: row;
     flex-flow: wrap;
     width: 100%;
     .main-card {
-      width: 240px;
+      width: 360px;
     }
   }
   .wordBreak {
@@ -157,7 +182,6 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    place-content: center;
     align-items: center;
   }
   @media screen and (max-width: 600px) {

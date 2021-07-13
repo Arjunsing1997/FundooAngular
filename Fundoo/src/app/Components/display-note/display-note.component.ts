@@ -21,13 +21,14 @@ export class DisplayNoteComponent implements OnInit {
   @Input() AllNotes: any
 
   constructor(public dialog: MatDialog) { }
+   
 
   ngOnInit(): void {
   }
 
   openDialog(card: any): void {
     const dialogRef = this.dialog.open(UpdateNoteComponent, {
-      width: '250px',
+      width: '360px',
       data: {note: card}
     });
 
